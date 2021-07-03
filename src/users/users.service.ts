@@ -1,4 +1,4 @@
-import { Inject, Injectable } from '@nestjs/common';
+import { Inject, Injectable, NotFoundException } from '@nestjs/common';
 import { Sdk } from 'src/generated/graphql';
 
 @Injectable()
@@ -12,6 +12,8 @@ export class UsersService {
       login,
     });
 
-    return data;
+    if (!data.data) throw new NotFoundException();
+
+    return data.data;
   }
 }

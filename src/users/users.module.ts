@@ -1,5 +1,4 @@
 import { Module } from '@nestjs/common';
-import { ConfigService } from '@nestjs/config';
 import {
   GraphQLRequestModule,
   GraphQLClientInject,
@@ -8,17 +7,18 @@ import { GraphQLClient } from 'graphql-request';
 import { UsersService } from './users.service';
 import { MoviesController } from './users.controller';
 import { getSdk } from 'src/generated/graphql';
+import { RootConfig } from 'src/config';
 
 @Module({
   imports: [
     GraphQLRequestModule.forRootAsync(GraphQLRequestModule, {
-      inject: [ConfigService],
-      useFactory: async (config: ConfigService) => {
+      inject: [RootConfig],
+      useFactory: async (config: RootConfig) => {
         return {
           endpoint: 'https://api.github.com/graphql',
           options: {
             headers: {
-              Authorization: `bearer ${config.get('TOKEN')}`,
+              Authorization: `bearer ${config.TOKEN}`,
             },
           },
         };
@@ -35,4 +35,4 @@ import { getSdk } from 'src/generated/graphql';
     },
   ],
 })
-export class MoviesModule {}
+export class UsersModule {}
