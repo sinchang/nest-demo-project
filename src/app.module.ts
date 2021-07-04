@@ -16,6 +16,7 @@ import { RootConfig } from './config';
       withHttpMiddleware: {
         enable: true,
       },
+      customUrl: '/metrics',
     }),
     UsersModule,
   ],

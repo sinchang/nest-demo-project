@@ -1,0 +1,7 @@
+docker build -t my-prometheus .
+docker run -p 9090:9090 my-prometheus
+
+docker run -i -p 3000:3000 grafana/grafana
+
+https://github.com/RisingStack/example-prometheus-nodejs
+https://prometheus.io/docs/prometheus/latest/installation/
