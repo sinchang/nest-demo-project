@@ -5,9 +5,10 @@ import {
 } from '@golevelup/nestjs-graphql-request';
 import { GraphQLClient } from 'graphql-request';
 import { UsersService } from './users.service';
-import { MoviesController } from './users.controller';
+import { UsersController } from './users.controller';
 import { getSdk } from 'src/generated/graphql';
 import { RootConfig } from 'src/config';
+import { clientTimingWrapper } from 'src/utils';
 
 @Module({
   imports: [
@@ -25,13 +26,14 @@ import { RootConfig } from 'src/config';
       },
     }),
   ],
-  controllers: [MoviesController],
+  controllers: [UsersController],
   providers: [
     UsersService,
     {
       provide: 'TypeSafeGqlSdk',
       inject: [GraphQLClientInject],
-      useFactory: (client: GraphQLClient) => getSdk(client),
+      useFactory: (client: GraphQLClient) =>
+        getSdk(client, clientTimingWrapper),
     },
   ],
 })

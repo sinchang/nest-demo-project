@@ -22,7 +22,6 @@
     "codegen": "graphql-codegen --config codegen.yml"
   },
   "dependencies": {
-    "@digikare/nestjs-prom": "1.0.0",
     "@golevelup/nestjs-graphql-request": "0.1.5",
     "@nestjs/common": "^7.6.15",
     "@nestjs/config": "^0.6.3",
@@ -37,6 +36,7 @@
     "nest-typed-config": "^1.4.0",
     "prom-client": "13.1.0",
     "reflect-metadata": "^0.1.13",
+    "response-time": "2.3.2",
     "rimraf": "^3.0.2",
     "rxjs": "^6.6.6"
   },

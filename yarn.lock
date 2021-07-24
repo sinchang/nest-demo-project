@@ -622,16 +622,6 @@
     exec-sh "^0.3.2"
     minimist "^1.2.0"
 
-"@digikare/nestjs-prom@1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@digikare/nestjs-prom/-/nestjs-prom-1.0.0.tgz#c8a39f5ee56092f72c11504e02e6d10a98f7df0a"
-  integrity sha512-iuIdnZlwZ5EVHfcqXRveB+7J/xlv1LAvroW2qxmH9G+NjAHNTaouheDwivyKUfZHaXP9Q3Zp1pN24l3rvZi6+A==
-  dependencies:
-    "@nestjs/testing" "^7.3.2"
-    prom-client "^12.0.0"
-    response-time "^2.3.2"
-    url-value-parser "^2.0.1"
-
 "@endemolshinegroup/cosmiconfig-typescript-loader@3.0.2":
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/@endemolshinegroup/cosmiconfig-typescript-loader/-/cosmiconfig-typescript-loader-3.0.2.tgz#eea4635828dde372838b0909693ebd9aafeec22d"
@@ -1328,7 +1318,7 @@
     lodash "4.17.21"
     path-to-regexp "3.2.0"
 
-"@nestjs/testing@^7.3.2", "@nestjs/testing@^7.6.15":
+"@nestjs/testing@^7.6.15":
   version "7.6.18"
   resolved "https://registry.yarnpkg.com/@nestjs/testing/-/testing-7.6.18.tgz#b4c137b5b6c2fb18c51602d33a083cd97c648283"
   integrity sha512-1AVk9vWZlPpx4CmzY6z9z0DHFgGCadfr01QdisGFAN740JwKqZWEqz12cVd+nsXDlYQPFRkp2ICBIS/6k1qZGQ==
@@ -6456,13 +6446,6 @@ prom-client@13.1.0:
   dependencies:
     tdigest "^0.1.1"
 
-prom-client@^12.0.0:
-  version "12.0.0"
-  resolved "https://registry.yarnpkg.com/prom-client/-/prom-client-12.0.0.tgz#9689379b19bd3f6ab88a9866124db9da3d76c6ed"
-  integrity sha512-JbzzHnw0VDwCvoqf8y1WDtq4wSBAbthMB1pcVI/0lzdqHGJI3KBJDXle70XK+c7Iv93Gihqo0a5LlOn+g8+DrQ==
-  dependencies:
-    tdigest "^0.1.1"
-
 promise@^7.1.1:
   version "7.3.1"
   resolved "https://registry.yarnpkg.com/promise/-/promise-7.3.1.tgz#064b72602b18f90f29192b8b1bc418ffd1ebd3bf"
@@ -6749,7 +6732,7 @@ resolve@^1.1.6, resolve@^1.10.0, resolve@^1.18.1:
     is-core-module "^2.2.0"
     path-parse "^1.0.6"
 
-response-time@^2.3.2:
+response-time@2.3.2:
   version "2.3.2"
   resolved "https://registry.yarnpkg.com/response-time/-/response-time-2.3.2.tgz#ffa71bab952d62f7c1d49b7434355fbc68dffc5a"
   integrity sha1-/6cbq5UtYvfB1Jt0NDVfvGjf/Fo=
@@ -7917,11 +7900,6 @@ url-parse-lax@^3.0.0:
   integrity sha1-FrXK/Afb42dsGxmZF3gj1lA6yww=
   dependencies:
     prepend-http "^2.0.0"
-
-url-value-parser@^2.0.1:
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/url-value-parser/-/url-value-parser-2.0.3.tgz#cd4b8d6754e458d65e8125260c09718d926e6e21"
-  integrity sha512-FjIX+Q9lYmDM9uYIGdMYfQW0uLbWVwN2NrL2ayAI7BTOvEwzH+VoDdNquwB9h4dFAx+u6mb0ONLa3sHD5DvyvA==
 
 use@^3.1.0:
   version "3.1.1"
